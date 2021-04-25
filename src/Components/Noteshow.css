@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+
+.showcomp {
+  margin-top: 391px;
+}
+.Shownote {
+  width: 84vw;
+  min-height: 150px;
+  background: linear-gradient(rgb(135, 135, 233), rgb(143, 215, 243));
+  margin: 31px;
+  border-radius: 5px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  padding: 10px;
+  position: relative;
+}
+
+.Shownote > h1 {
+  font-family: "Acme", sans-serif;
+  color: white;
+  background-color: rgb(43, 177, 226);
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+
+.Shownote > p {
+  font-family: "Forum", cursive;
+  font-size: 1.4rem;
+  color: black;
+}
+
+.Shownote .dele_btn {
+  padding: 8px;
+  color: white;
+  background-color: rgb(155, 53, 53);
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-8px);
+}
+
+.Shownote .edit_btn {
+  padding: 8px;
+  background-color: rgb(216, 198, 32);
+  cursor: pointer;
+  position: absolute;
+  border-radius: 5px;
+  bottom: 0;
+  transform: translateX(-67px);
+  width: 52px;
+}
+
+.Shownote > button:hover {
+  background-color: wheat;
+  color: black;
+}
+
+@media (min-width: 700px) {
+  .showcomp {
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    margin-left: 70px;
+  }
+  .Shownote {
+    width: 400px;
+  }
+}

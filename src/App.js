@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer } from "react";
+import "./App.css";
+import Takenote from "./Components/Takenote";
+import { context } from "./Store";
+import { reducer, Initialstate } from "./Context/Reducer";
+import Noteshow from "./Components/Noteshow";
 
 function App() {
+  const [state, dispatch] = useReducer(reducer, Initialstate);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <context.Provider value={[state, dispatch]}>
+      <div className="App">
+        <Takenote />
+        <Noteshow />
+      </div>
+    </context.Provider>
   );
 }
 
